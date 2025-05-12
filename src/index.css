@@ -1,0 +1,1256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #faae17;
+  --background-color: #1c1e29;
+  --second-background-color: #070808cc;
+  --primiary-color: #f2f2f2;
+}
+html {
+  font-size: 15px;
+  font-family: Verdana;
+  background-color: var(--background-color);
+}
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--main-color);
+  color: var(--background-color);
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.btn:hover {
+  transition: all ease-in-out 0.2s;
+  box-shadow: 1px 1px 5px white;
+}
+.blob_a {
+  position: absolute;
+  height: 20rem;
+  z-index: 1;
+}
+.blob1 {
+  left: -100px;
+  bottom: 0;
+}
+.blob2 {
+  right: 0;
+  top: 0;
+}
+.blob3 {
+  right: 10px;
+  height: 25rem;
+}
+.invisible {
+  display: none;
+}
+.title {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--main-color);
+  z-index: 10;
+}
+mark {
+  background-color: transparent;
+  color: var(--main-color);
+}
+input {
+  height: 2rem;
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+label {
+  font-size: 1.3rem;
+  color: var(--main-color);
+}
+textarea {
+  height: 7rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+#uni {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.dartpython {
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+}
+.rightplayground {
+  font-size: 1.3rem;
+}
+/*
+.blob_svg{
+    bottom: 0%;
+}
+.blob_svg2{
+    top: -25%;
+    right: 0%;
+}
+*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #f2f2f2;
+}
+.container {
+  background-color: var(--background-color);
+  height: 100vh;
+}
+
+.smallScreen {
+  display: none;
+}
+/*============================================================
+
+Header Section Designing...
+
+============================================================*/
+.headerContainer {
+  display: flex;
+  border: 1px solid white;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  padding: 1.3rem 1.5rem;
+  top: 0%;
+  z-index: 100;
+  top: 0%;
+  background-color: var(--background-color);
+}
+.headerImage {
+  display: flex;
+  color: var(--main-color);
+  align-items: center;
+  /* gap: 1rem; */
+}
+.headerp {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.headerlogo {
+  height: 2.7rem;
+}
+.Headerbtngroup {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 450px) {
+  .headerImage p {
+    font-size: 1rem;
+  }
+  .headerlogo {
+    height: 2.3rem;
+  }
+  .Headerbtngroup {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 350px) {
+  .headerImage p {
+    display: none;
+  }
+  .Headerbtn {
+    padding: 2px 4px;
+  }
+}
+
+/*============================================================
+
+Home Page Designing... 
+
+============================================================*/
+.landingContainer {
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+.landingInfo p {
+  color: var(--primiary-color);
+  font-size: 1.2rem;
+}
+.landingInfo h1 {
+  font-size: 7rem;
+  color: var(--main-color);
+  -webkit-text-stroke: 2px #1c1e29;
+}
+.landingInfo {
+  z-index: 10;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .landingInfo h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .blob_a {
+    height: 13rem;
+  }
+  .blob1 {
+    left: -40px;
+    bottom: 0;
+  }
+  .blob2 {
+    right: 0px;
+    top: 50px;
+  }
+}
+@media (max-width: 250px) {
+  .landingInfo h1 {
+    font-size: 2rem;
+  }
+  .landingInfo p {
+    font-size: 1rem;
+  }
+}
+
+/*============================================================
+
+Home page 2 section Designing... 
+
+============================================================*/
+
+.codingSection {
+  display: flex;
+}
+.codingsec {
+  display: flex;
+  flex: 1;
+}
+.codingInfo {
+  padding: 1rem;
+  padding-left: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.infoCoding {
+  color: var(--primiary-color);
+  font-size: 2.5rem;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+.codingimage {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.CodingImg {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+
+/*============================================================
+
+Feedback-Homepage Page Designing... 
+
+============================================================*/
+.feedSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.feedinfo p {
+  width: 70%;
+}
+.feedinfo {
+  z-index: 10;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.formDetails label {
+  -webkit-text-stroke: 1px #1c1e29;
+  font-weight: bold;
+}
+.formDetails {
+  z-index: 10;
+  width: 70%;
+  padding: 0.7rem;
+}
+.formbtn {
+  width: 100%;
+}
+/*============================================================
+
+Footer page section Designing... 
+
+============================================================*/
+.wave-container {
+  height: 15vh;
+  background-color: #1c1e29;
+  position: relative;
+  display: flex;
+  padding: 2rem;
+  align-items: flex-end;
+}
+.wave p {
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.footer_faizan {
+  color: var(--background-color);
+}
+.wave-container::before {
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 168px;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  background-size: 180rem;
+  background-repeat: repeat no-repeat;
+  background-position: 27vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 80' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 13L33 11C82 8 133 8 200 17C267 26 333 40 400 42C467 44 533 35 600 24C667 13 733 0 800 0C867 0 933 13 1000 17C1067 22 1133 17 1167 15L1200 13V80H1167C1133 80 1067 80 1000 80C933 80 867 80 800 80C733 80 667 80 600 80C533 80 467 80 400 80C333 80 267 80 200 80C133 80 67 80 33 80H0V22.332Z' fill='%23faae17'/></svg>");
+}
+@media (max-width: 850px) {
+  .wave-container::before {
+    height: 84px;
+  }
+}
+
+/*============================================================
+
+Language Side Navbar Section Designing...
+
+============================================================*/
+.LangContainer {
+  width: 5rem;
+  background-color: var(--background-color);
+  height: 90vh;
+  display: grid;
+}
+.langSection {
+  display: grid;
+}
+.languageBorder {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+.languages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+}
+.FeatureSection {
+  background-color: var(--second-background-color);
+}
+/* .leftcolor{
+    border: 1px solid red;
+} */
+/* .jsleft{
+    background-color: white;
+} */
+
+/*============================================================
+
+Registration Page Designing... 
+
+============================================================*/
+.registerMainComponent {
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--primiary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.registerTitle {
+  color: var(--primiary-color);
+}
+.registerSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+}
+.registerForm {
+  background-color: var(--second-background-color);
+  z-index: 10;
+  border-radius: 5%;
+}
+form {
+  padding: 10%;
+  display: grid;
+  align-content: center;
+}
+.RegisterInputField {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.Registerdomain select {
+  border: 1px solid;
+  width: 100%;
+  height: 2rem;
+}
+.registerSVG {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  z-index: 10;
+}
+.registerSVG img {
+  width: 70%;
+}
+.registerSVG p {
+  font-size: 110%;
+}
+.registerSVG p span {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.registerSVG p span:hover {
+  text-decoration: underline;
+}
+.errorlabelinput {
+  color: red;
+}
+/*============================================================
+
+Login Page Designing... 
+
+============================================================*/
+
+.loginContainer {
+  background-color: var(--background-color);
+  color: var(--primiary-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  height: 100vh;
+}
+.loginimage img {
+  height: 70%;
+}
+.loginimage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.LoginForm {
+  background-color: var(--second-background-color);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 90%;
+  gap: 2rem;
+}
+
+/*============================================================
+
+Error Page Designing... 
+
+============================================================*/
+.errorcontainer {
+  height: 90vh;
+  background-color: var(--background-color);
+}
+.errorBody {
+  height: 90%;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+}
+.errorPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  color: white;
+}
+.errortextcontainer h1 {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+.eerrrroorr {
+  font-size: 0.7em;
+}
+.messageEr {
+  text-align: center;
+  font-size: 2.2em;
+}
+.errortextcontainer {
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid white;
+  border-radius: 1rem;
+  min-width: 50%;
+  max-width: 80%;
+  overflow: hidden;
+  height: 25rem;
+  display: grid;
+  padding: 1rem 2rem;
+}
+
+/*============================================================
+
+Voice 2 Text Playground Page Designing...
+
+============================================================*/
+.voiceContainer {
+  height: 90vh;
+  background-color: var(--background-color);
+}
+.voiceBody {
+  height: 90%;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+}
+.voicePlayground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.voiceTextContainer {
+  margin-top: 2rem;
+  background-color: var(--primiary-color);
+  border-radius: 1rem;
+  min-width: 50%;
+  max-width: 80%;
+  overflow: hidden;
+  height: 25rem;
+  display: grid;
+  grid-template-rows: 1fr 5rem;
+}
+
+.voice2TextOutput h3 {
+  text-transform: lowercase;
+}
+.voice2TextOutput {
+  height: 20rem;
+  padding: 1rem;
+  overflow-y: auto;
+  border: none;
+  width: 100%;
+  background-color: var(--primiary-color);
+}
+
+.btngroup button {
+  padding: 1rem 2rem;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: var(--background-color);
+  border-radius: 0.7rem;
+}
+.btngroup {
+  padding: 0.3rem;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*========================================================
+
+JavaScript Editor page Design
+
+=========================================================*/
+
+.jsContainer {
+  background-color: var(--background-color);
+}
+.jsBody {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+}
+.runHeaderJS {
+  height: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* .jsplaygroundMain{
+    height: 90vh;
+    overflow: auto;
+} */
+.jsplayground {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90%;
+  color: white;
+}
+.clear {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--main-color);
+  border-color: var(--main-color);
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+.jsfile {
+  background-color: var(--second-background-color);
+  border: 1px solid white;
+}
+.jsrightheaderfile p {
+  font-size: 1.5rem;
+}
+.jsleftheaderfile {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.jsrightheaderfile {
+  background-color: var(--second-background-color);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.snippet {
+  border: 0.1px solid white;
+  padding: 0.5rem;
+  height: 82vh;
+  overflow: auto;
+}
+.runbtn {
+  display: flex;
+  gap: 1rem;
+}
+.vbtn {
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+.voicebtn {
+  height: 1.7rem;
+}
+
+/*========================================================
+
+HTML Editor page Design
+
+=========================================================*/
+
+.htmlcodeEditor {
+  height: 90vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.webeditorheading img {
+  height: 2rem;
+}
+.webeditorheading {
+  /* flex: 1; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font: 600 1.3rem sans-serif;
+  color: var(--main-color);
+  margin: 0.5rem 0;
+}
+.jsrunbtn {
+  padding: 0.3rem 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--main-color);
+  font-weight: bold;
+  margin-left: auto;
+}
+.editormain {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  overflow-x: auto;
+  padding: 0.3rem;
+}
+.editormain textarea {
+  width: 100%;
+  height: calc(90% - 2rem);
+  border: none;
+  padding: 1rem;
+  font-style: 1.1rem;
+  resize: vertical;
+}
+#result {
+  width: 95%;
+  height: 95%;
+  border: none;
+  background-color: white;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-top: 1.3rem;
+}
+/*========================================================
+    
+image to text page Design
+    
+=========================================================*/
+
+.imageMain {
+  width: 90%;
+  background-color: var(--second-background-color);
+  height: 80vh;
+  overflow: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(7px + 2vmin);
+  color: white;
+  padding: 1rem;
+}
+.Image-Logo {
+  pointer-events: none;
+}
+.imagefiletype {
+  border: 1px solid white;
+  max-width: 90%;
+  width: 50%;
+  margin: 1rem 0;
+  height: 3rem;
+}
+.image-text-box textarea::placeholder {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.imgbtn {
+  width: 300px;
+  height: 3rem;
+}
+.image-text-box textarea {
+  padding: 0.5rem;
+  height: 90%;
+  color: black;
+  font-size: 1.3rem;
+  width: 100%;
+}
+.image-text-box {
+  width: 75%;
+  padding: 1rem;
+  height: 70%;
+}
+.image-text-box p {
+  color: var(--main-color);
+}
+.Image-Logo {
+  height: 300px;
+  width: 90%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.btnbtn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 3rem;
+}
+
+/*========================================================
+    
+Responsive page Design
+    
+=========================================================*/
+
+@media (max-width: 250px) {
+  .container {
+    display: none;
+  }
+  .smallScreen {
+    display: block;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0.3rem;
+    padding: 0.5rem;
+  }
+  .headerContainer {
+    height: 4rem;
+    padding: 1rem 0.7rem;
+    border: 0;
+  }
+  .headerlogo {
+    height: 2rem;
+  }
+  .headerp {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .registerMainComponent {
+    display: none;
+  }
+  .loginContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 480px) {
+  /* Mobile View */
+
+  .LangContainer {
+    margin: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+  }
+  .languages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+  }
+  .langSection {
+    width: 75vw;
+    /* height: 4rem; */
+  }
+  .FeatureSection {
+    width: 30vw;
+    background-color: var(--background-color);
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    height: 4rem;
+  }
+  .wholeeditorBody {
+    display: flex;
+    flex-direction: column;
+  }
+  /* edutor responsive part here */
+  /* .runrun{
+        padding: .5rem;
+    } */
+  .htmlcodeEditor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200vh;
+    /* align-items: center; */
+  }
+  .imagefiletype {
+    height: 5rem;
+  }
+  .btngroup button {
+    padding: 7px;
+  }
+  .btngroup {
+    display: flex;
+    gap: 0.5rem;
+    /* overflow: auto; */
+  }
+  .imagebutton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .imgbtn {
+    width: 150%;
+  }
+  .btnbtn {
+    width: 50%;
+  }
+  .voicePlayground mark h1 {
+    text-align: center;
+  }
+  .codemaincode {
+    height: 30vh;
+  }
+  #result {
+    height: 85vh;
+  }
+
+  .languageBorder {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .languageBorder img {
+    height: 2rem;
+  }
+  .playground {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .jsleftheaderfile mark h2 {
+    font-size: 1rem;
+  }
+  .jsleftheaderfile {
+    width: 100vw;
+  }
+  .jsrightheaderfile {
+    display: none;
+  }
+  .invisible {
+    display: block;
+  }
+  .snippet {
+    border: 0;
+    height: 80vh;
+  }
+  .dartpython {
+    height: 99%;
+  }
+  /* .voiceBody{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 0 1fr;
+    }
+    */
+
+  .registerMainComponent {
+    height: 100%;
+  }
+  .registerSVG img {
+    display: none;
+  }
+  .registerSection {
+    grid-template-columns: 1fr;
+  }
+  form {
+    padding: 7%;
+  }
+  .registerLabels {
+    font-size: 0.9rem;
+  }
+  .loginContainer .title {
+    margin: 1rem;
+  }
+  .loginContainer {
+    height: 100%;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .headerContainer {
+    height: 4rem;
+    padding: 1rem 0.7rem;
+  }
+  .headerlogo {
+    height: 1.7rem;
+  }
+  .headerp {
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+  }
+  .btn {
+    padding: 7px;
+    /* font-size: 1rem; */
+  }
+  .Headerbtn {
+    padding: 7px;
+    font-size: 0.8rem;
+  }
+  .codingSection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container {
+    height: 120vh;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+  .codingSection {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #uni {
+    /* border: 1px solid red; */
+    flex-direction: column-reverse;
+  }
+  .codingimage img {
+    width: 17rem;
+  }
+  .codingInfo {
+    padding-left: 1rem;
+  }
+  .infoCoding {
+    font-size: 1.5rem;
+  }
+  .feedSection {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .info {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #1c1e29;
+    font-weight: bold;
+  }
+  .wave {
+    height: 15rem;
+  }
+  .wave p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Extra Small Devices */
+
+  /* feedback form alignment is showing problem */
+
+  .LangContainer {
+    margin: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+  }
+  .langSection {
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 4rem;
+  }
+  .languages {
+    border: none;
+  }
+  .FeatureSection {
+    flex-wrap: wrap;
+    width: 30vw;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 4rem;
+  }
+  .wholeeditorBody {
+    display: flex;
+    flex-direction: column;
+  }
+  .playground {
+    margin-top: 0.5rem;
+  }
+  /* .runHeaderJS{
+        display: flex;
+        flex-direction: column;
+    }
+    .runbtn{
+        width: 100% ;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+    }
+    .jsleftheaderfile{
+        display: flex;
+        flex-direction: column;
+    }
+    .snippet{
+        width: 100%;
+        border: 0;
+    }
+    .snippet1{
+        border: 1px solid white;
+    }
+    .clear{
+        margin: 1rem 0;
+        width: fit-content;
+    }
+    .jsrightheaderfile{
+        border: 1px solid yellow;
+        display: grid;
+        width: 100%;
+    }
+    .rightplayground{
+        width: 90vw;
+        border-radius: 1rem;
+        color: white;
+    } */
+  /* .voiceBody{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 0 1fr;
+    }*/
+
+  .registerMainComponent {
+    height: 100%;
+  }
+  .registerSVG img {
+    display: none;
+  }
+  .registerSection {
+    grid-template-columns: 1fr;
+  }
+  .loginContainer .title {
+    margin: 1rem;
+  }
+  .loginContainer {
+    height: 100%;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 7%;
+  }
+
+  .headerContainer {
+    height: 4rem;
+  }
+  .container {
+    height: 100vh;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .codingSection {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .codingInfo {
+    display: flex;
+    align-items: center;
+  }
+  #uni {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .btn {
+    padding: 15px 30px;
+  }
+  .Headerbtn {
+    padding: 10px;
+  }
+  .codingimage img {
+    width: 20rem;
+  }
+  .infoCoding {
+    font-size: 1.7rem;
+  }
+
+  .feedSection {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .info {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #1c1e29;
+    font-weight: bold;
+  }
+  .wave {
+    height: 15rem;
+  }
+  .wave p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* small Devices */
+
+  .title {
+    font-size: 3rem;
+  }
+  .infoCoding {
+    font-size: 1.5rem;
+  }
+  .info {
+    font-size: 1.7rem;
+  }
+  .wave {
+    height: 13rem;
+  }
+  form {
+    padding: 5%;
+  }
+
+  .registerSVG {
+    display: flex;
+    justify-content: center;
+  }
+  .registerSVG img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Large Tablets and laptop Devices */
+
+  .container {
+    height: 120vh;
+  }
+  .infoCoding {
+    font-size: 1.7rem;
+  }
+  .info {
+    font-size: 2rem;
+  }
+  .wave {
+    height: 10rem;
+  }
+  form {
+    padding: 5%;
+  }
+  .registerSVG {
+    display: flex;
+    justify-content: center;
+  }
+  .registerSVG img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Desktop Devices */
+
+  .codingimage img {
+    margin-top: 2rem;
+    height: 25rem;
+    width: 30rem;
+    margin-bottom: 1rem;
+  }
+  .infoCoding {
+    font-size: 2rem;
+  }
+  .wave {
+    height: 15rem;
+  }
+
+  /* Registration Form Design */
+  .registerMainComponent {
+    height: 120vh;
+  }
+}

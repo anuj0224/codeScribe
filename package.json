@@ -1,0 +1,61 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/user-event": "^13.5.0",
+    "@uiw/codemirror-extensions-basic-setup": "^4.21.9",
+    "@uiw/codemirror-extensions-classname": "^4.21.9",
+    "@uiw/codemirror-extensions-events": "^4.21.9",
+    "@uiw/codemirror-extensions-langs": "^4.21.9",
+    "@uiw/codemirror-themes-all": "^4.21.9",
+    "@uiw/react-codemirror": "^4.21.9",
+    "axios": "^1.4.0",
+    "codemirror": "^6.0.1",
+    "formik": "^2.4.3",
+    "gsap": "^3.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "5.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "react-use-clipboard": "^1.0.9",
+    "regenerator-runtime": "^0.13.11",
+    "tesseract.js": "^4.1.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/runtime": "^7.22.6",
+    "@testing-library/dom": "^9.3.1",
+    "@testing-library/jest-dom": "^6.0.1",
+    "@testing-library/react": "^14.0.0"
+  }
+}
