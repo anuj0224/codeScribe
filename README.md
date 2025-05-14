@@ -4,6 +4,14 @@
 
 > A modern code editor platform with support for JavaScript, Python, HTML/CSS/JS, plus voice-to-text and image-to-text tools — built using MERN stack.
 
+---
+
+## 🔗 Live Demo
+
+🎯 **Check out the live version here**:  
+👉 [https://anuj0224.github.io/codeScribe](https://anuj0224.github.io/codeScribe)
+
+---
 
 ## ✨ Features
 
