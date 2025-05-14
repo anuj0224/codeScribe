@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/codeScribe/static/css/main.c1be7d57.css",
+    "main.js": "/codeScribe/static/js/main.a85b02c6.js",
+    "static/media/Website Creator-amico.svg": "/codeScribe/static/media/Website Creator-amico.f21aac70ba5107edee1882f1f3476764.svg",
+    "static/media/favi-removebg-preview.png": "/codeScribe/static/media/favi-removebg-preview.e7007484980b3cc75108.png",
+    "static/media/Man reading-pana.svg": "/codeScribe/static/media/Man reading-pana.4c5b1d2cbd24f9bcf963ff8c6a4cc7cd.svg",
+    "static/media/Writing on the wall-rafiki.svg": "/codeScribe/static/media/Writing on the wall-rafiki.021679b705d3ab9356cea0416744f29e.svg",
+    "static/media/Speech to text-bro.svg": "/codeScribe/static/media/Speech to text-bro.b2eec4c055291d9329627321d2d38bfe.svg",
+    "static/media/JavaScript frameworks-rafiki.svg": "/codeScribe/static/media/JavaScript frameworks-rafiki.93a10f54e08748ad2c734066d8691f56.svg",
+    "static/media/copy_icon.gif": "/codeScribe/static/media/copy_icon.9ceec705c7fd5f58cea0.gif",
+    "static/media/blobanimation.svg": "/codeScribe/static/media/blobanimation.77e8f3f6a0386ac3d21ee4900b5cdc3c.svg",
+    "index.html": "/codeScribe/index.html",
+    "main.c1be7d57.css.map": "/codeScribe/static/css/main.c1be7d57.css.map",
+    "main.a85b02c6.js.map": "/codeScribe/static/js/main.a85b02c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1be7d57.css",
+    "static/js/main.a85b02c6.js"
+  ]
+}
