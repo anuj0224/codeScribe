@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Voice2Text from "./Editor/Voice2Text";
 import Image2Text from "./Editor/Image2Text";
 import Python from "./Editor/Python";
@@ -30,7 +30,7 @@ function App() {
           }}
         />
       </div>
-      <BrowserRouter>
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -42,7 +42,7 @@ function App() {
           <Route path="/editor/image2text" element={<Image2Text />} />
           <Route path="*" element={<Errorpage />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </UsedContext.Provider>
   );
 }
