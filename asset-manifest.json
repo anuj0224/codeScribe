@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/codeScribe/static/css/main.c1be7d57.css",
-    "main.js": "/codeScribe/static/js/main.a85b02c6.js",
+    "main.js": "/codeScribe/static/js/main.1ac12056.js",
     "static/media/Website Creator-amico.svg": "/codeScribe/static/media/Website Creator-amico.f21aac70ba5107edee1882f1f3476764.svg",
     "static/media/favi-removebg-preview.png": "/codeScribe/static/media/favi-removebg-preview.e7007484980b3cc75108.png",
     "static/media/Man reading-pana.svg": "/codeScribe/static/media/Man reading-pana.4c5b1d2cbd24f9bcf963ff8c6a4cc7cd.svg",
@@ -12,10 +12,10 @@
     "static/media/blobanimation.svg": "/codeScribe/static/media/blobanimation.77e8f3f6a0386ac3d21ee4900b5cdc3c.svg",
     "index.html": "/codeScribe/index.html",
     "main.c1be7d57.css.map": "/codeScribe/static/css/main.c1be7d57.css.map",
-    "main.a85b02c6.js.map": "/codeScribe/static/js/main.a85b02c6.js.map"
+    "main.1ac12056.js.map": "/codeScribe/static/js/main.1ac12056.js.map"
   },
   "entrypoints": [
     "static/css/main.c1be7d57.css",
-    "static/js/main.a85b02c6.js"
+    "static/js/main.1ac12056.js"
   ]
 }
