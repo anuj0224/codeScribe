@@ -20,6 +20,11 @@
   * JavaScript
   * Python
   * HTML, CSS, JS
+  * Binary Tool
+      * Decimal ➝ Binary
+      * Binary ➝ Decimal
+      * Text ➝ Binary
+      * Binary ➝ Text
 * 🎙️ Voice to Text Tool (for quick coding by speaking)
 * 🖼️ Image to Text (OCR) Tool
 * 🌓 Dark Themed Interface
