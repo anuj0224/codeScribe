@@ -62,7 +62,7 @@ function Image2Text() {
             </mark>
             <br />
             <main className="imageMain">
-              <img src={imagePath} className="Image-Logo" alt="logo" />
+              {/* <img src={imagePath} className="Image-Logo" alt="logo" /> */}
               <input
                 className="imagefiletype"
                 type="file"

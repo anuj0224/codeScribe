@@ -11,6 +11,7 @@ import Header from "./Header";
 import { Toaster } from "react-hot-toast";
 
 import { initialState, reducer } from "../reducer/UseReducer";
+import Binary from "./Editor/Binary";
 
 export const UsedContext = createContext();
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/editor/javascript" element={<JavaScript />} />
           <Route path="/editor/html" element={<Html />} />
           <Route path="/editor/css" element={<Html />} />
+          <Route path="/editor/binary" element={<Binary />} />
           <Route path="/editor/voice2text" element={<Voice2Text />} />
           <Route path="/editor/image2text" element={<Image2Text />} />
           <Route path="*" element={<Errorpage />} />

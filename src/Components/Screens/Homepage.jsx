@@ -8,6 +8,7 @@ import SpeechCod from "../../assets/Speech to text-bro.svg";
 import ImagCod from "../../assets/Writing on the wall-rafiki.svg";
 import Feedback from "../HomepageScreen/Feedback";
 import Footer from "../HomepageScreen/Footer";
+import binaryCod from "../../assets/Coding-bro.svg";
 
 function Homepage() {
   const width2 = window.outerWidth;
@@ -38,7 +39,7 @@ function Homepage() {
           }
           path="/editor/javaScript"
           image={ImageCod}
-          // poss={{'flexDirection':'row'}}
+        // poss={{'flexDirection':'row'}}
         />
         <CodingPage
           title="Python Compiler"
@@ -73,6 +74,23 @@ function Homepage() {
           uniId={"uni"}
         />
         <CodingPage
+          title="Binary Converter"
+          path="/editor/binary"
+          con="Try Binary Tool"
+          info={
+            <>
+              Confused by conversions between <mark>Binary</mark>, <mark>Decimal</mark>, and <mark>Text</mark>?
+              <br />
+              Use our all-in-one <mark>Binary Converter</mark> to switch between numbers and text in seconds.
+              <br />
+              Whether it's <mark>Binary to Text</mark> or <mark>Decimal to Binary</mark> — we’ve got you covered!
+            </>
+          }
+          image={binaryCod}
+          uniId={"uni"}
+        />
+
+        <CodingPage
           title="Image To Code"
           path="/editor/image2text"
           image={ImagCod}
@@ -83,7 +101,7 @@ function Homepage() {
               Feature of <mark>Image to Code</mark> Tool.
             </>
           }
-          // poss={{'flexDirection':'row'}}
+        // poss={{'flexDirection':'row'}}
         />
         <CodingPage
           title="Voice To Code"

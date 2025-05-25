@@ -30,9 +30,9 @@ function Html() {
 
     run_button.current.onclick = () => jsrun();
 
-    html_code.current.value = localStorage.html_code;
-    css_code.current.value = localStorage.css_code;
-    js_code.current.value = localStorage.js_code;
+    html_code.current.value = localStorage.html_code || "";
+    css_code.current.value = localStorage.css_code|| "";
+    js_code.current.value = localStorage.js_code|| "";
   }, []);
 
   return (

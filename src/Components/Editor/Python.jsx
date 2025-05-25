@@ -1,51 +1,60 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LangList from "./LangList";
 // import axios from 'axios';
 import copy_icon from "../../assets/copy_icon.gif";
 import download_icon from "../../assets/download_logo.png";
 import { toast } from "react-hot-toast";
+let pyodide = null;
+
+const loadPyodideScript = async () => {
+  if (!pyodide) {
+    toast.loading("Loading Python Interpreter...");
+    pyodide = await window.loadPyodide();
+    toast.remove();
+    toast.success("Python Ready");
+  }
+};
 
 function Python() {
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
 
-  const handleSubmit = async () => {
-    toast.loading("Please Wait while File is Execuing");
-    const payload = {
-      language: "py",
-      code,
-    };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js";
+    script.onload = loadPyodideScript;
+    document.body.appendChild(script);
+  }, []);
 
-    try {
-      // const {data} = await axios.post("http://localhost:5000/runpy",payload)
-      const response = await fetch("http://localhost:5000/runpy", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        toast.remove();
-        setOutput(data.output);
-        toast.success("Executed Successfully.");
-      } else {
-        setOutput(data.error);
-        toast.remove();
-        toast.error("An error Occured.");
-      }
-      // console.log("Faizan Alam",data);
-      // toast.remove();
-      // toast.remove();
-      // setCode("");
-    } catch (err) {
-      toast.remove();
-      setOutput("Error in communication with the server");
-      toast.error("Please Enter Valid Python Code");
-      console.log(`error is in python.js .The error : ${err}`);
-    }
-  };
+  const handleSubmit = async () => {
+  toast.loading("Executing Python Code...");
+  try {
+    await loadPyodideScript(); // Ensure Pyodide is loaded
+
+    // Redirect stdout
+    pyodide.runPython(`
+import sys
+from io import StringIO
+sys.stdout = mystdout = StringIO()
+    `);
+
+    // Execute user code
+    await pyodide.runPythonAsync(code);
+
+    // Get the printed output
+    const printedOutput = pyodide.runPython("mystdout.getvalue()");
+
+    setOutput(printedOutput || "No output");
+    toast.remove();
+    toast.success("Executed in Browser Successfully.");
+  } catch (err) {
+    setOutput(err.toString());
+    toast.remove();
+    toast.error("Python Error");
+    console.error("Pyodide Error:", err);
+  }
+};
+
 
   const clear = () => {
     toast.success("Output Cleared");

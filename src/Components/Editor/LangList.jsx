@@ -4,6 +4,7 @@ import js from "../../assets/js.png";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import python from "../../assets/python.png";
+import binary from "../../assets/binary.png";
 import image from "../../assets/image.png";
 import { NavLink } from "react-router-dom";
 
@@ -19,7 +20,6 @@ function LangList(props) {
             <NavLink to="/editor/javascript">
               <img src={js} alt="JLanguage " />
             </NavLink>
-            {/* <a href="/editor/javascript"><img src={js} alt="JLanguage " /></a> */}
           </div>
           <div
             className="languageBorder"
@@ -33,19 +33,27 @@ function LangList(props) {
             className="languageBorder"
             style={{ backgroundColor: `${props.leftcolorpy}` }}
           >
-            {/* <a href="/editor/python"><img className={props.py} src={python} alt="Language "  /></a> */}
             <NavLink to="/editor/python">
               <img className={props.py} src={python} alt="Language " />
             </NavLink>
           </div>
           <div
             className="languageBorder"
+            style={{ backgroundColor: `${props.leftcolorbinary}` }}
+          >
+            <NavLink to="/editor/binary">
+              <img  src={binary} alt="Language " />
+            </NavLink>
+          </div>
+          {/* <div
+            className="languageBorder"
             style={{ backgroundColor: `${props.leftcolorhtml}` }}
           >
             <NavLink to="/editor/css">
               <img className={props.html} src={css} alt="Language " />
             </NavLink>
-          </div>
+          </div> */}
+          
         </div>
         <div className="FeatureSection languages">
           <div
