@@ -104,7 +104,7 @@ function Homepage() {
         // poss={{'flexDirection':'row'}}
         />
         <CodingPage
-          title="Voice To Code"
+          title="Voice To Text"
           path="/editor/voice2text"
           image={SpeechCod}
           info={
